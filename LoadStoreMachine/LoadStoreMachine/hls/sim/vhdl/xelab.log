@@ -1,0 +1,56 @@
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_execute_top glbl -Oenable_linking_all_libraries -prj execute.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims -L unisims_ver -L xpm -L floating_point_v7_1_20 -L floating_point_v7_0_25 --lib ieee_proposed=./ieee_proposed -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./execute_subsystem -s execute 
+Multi-threading is on. Using 14 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/execute.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_execute_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/file_agent/file_agent_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/svr/svr_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/svr/svr_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/execute_subsystem/execute_subsystem_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/svtb/misc_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/svtb/sv_module_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv_module_top
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/AESL_sim_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/execute.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'execute'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/execute_lsm_instance_mem_RAM_AUTO_1R1W.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'execute_lsm_instance_mem_RAM_AUTO_1R1W'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/execute_lsm_instance_reg_file_RAM_AUTO_1R1W.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'execute_lsm_instance_reg_file_RAM_AUTO_1R1W'
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4468] File : /proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv, Line : 25994, RANDC variable size more than 8 bits. This will be treated as a RAND variable instead.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.$unit_sv_module_top_sv
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.svr_pkg
+Compiling package xil_defaultlib.file_agent_pkg
+Compiling package xil_defaultlib.execute_subsystem_pkg
+Compiling architecture rtl of entity xil_defaultlib.execute_lsm_instance_reg_file_RAM_AUTO_1R1W [\execute_lsm_instance_reg_file_R...]
+Compiling architecture rtl of entity xil_defaultlib.execute_lsm_instance_mem_RAM_AUTO_1R1W [\execute_lsm_instance_mem_RAM_AU...]
+Compiling architecture behav of entity xil_defaultlib.execute [execute_default]
+Compiling module xil_defaultlib.misc_interface_default
+Compiling module xil_defaultlib.svr_if(DATA_WIDTH=4)
+Compiling module xil_defaultlib.svr_if(DATA_WIDTH=5)
+Compiling module xil_defaultlib.svr_if_default
+Compiling module xil_defaultlib.sv_module_top
+Compiling module xil_defaultlib.apatb_execute_top
+Compiling module work.glbl
+Built simulation snapshot execute

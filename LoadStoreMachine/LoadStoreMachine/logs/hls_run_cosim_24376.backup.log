@@ -1,0 +1,64 @@
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine'.
+INFO: [HLS 200-1611] Setting target device to 'xc7z007s-clg225-2'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./loadstore.cpp' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/loadstore.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./loadstore.h' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/loadstore.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=./test_lsm.cpp' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/test_lsm.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=execute' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(12)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z007sclg225-2' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(8)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.rtl=vhdl' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=all' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/vitis-comp.json
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/2025.1/Vitis/win64/tools/vcxx/libexec/clang++"
+   Compiling test_lsm.cpp_pre.cpp.tb.cpp
+   Compiling loadstore.cpp_pre.cpp.tb.cpp
+   Compiling apatb_execute.cpp
+   Compiling apatb_execute_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Assertion failed: result_reg1 == 0x0000000A, file C:/Projects/Xilinx/LoadStore/LoadStoreMachine/test_lsm.cpp, line 19
+Test 1: Register Write and Read
+
+$00: 0x00000000  0x403FFC01  0x00000000  0x00000000  
+$04: 0x00000000  0x00000000  0x00000000  0x00000000  
+$08: 0x00000000  0x00000000  0x00000000  0x00000000  
+$12: 0x00000000  0x00000000  0x00000000  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+
+$00: 0x00000000  0x403FFC01  0x403FFC02  0x00000000  
+$04: 0x00000000  0x00000000  0x00000000  0x00000000  
+$08: 0x00000000  0x00000000  0x00000000  0x00000000  
+$12: 0x00000000  0x00000000  0x00000000  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+reg1 = 0x403FFC01
+reg2 = 0x403FFC02
+ERROR: [COSIM 212-359] Aborting co-simulation: C TB simulation failed, nonzero return value '3'.
+ERROR: [COSIM 212-320] C TB testing failed, stop generating test vectors. Please check C TB or re-run cosim.
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+ERROR: 
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 2 seconds. Total elapsed time: 23.799 seconds; peak allocated memory: 206.797 MB.

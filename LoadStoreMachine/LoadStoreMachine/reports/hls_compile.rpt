@@ -1,0 +1,131 @@
+
+
+================================================================
+== Synthesis Summary Report of 'execute'
+================================================================
++ General Information: 
+    * Date:           Sat Nov 22 20:33:39 2025
+    * Version:        2025.1 (Build 6135595 on May 21 2025)
+    * Project:        LoadStoreMachine
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z007s-clg225-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------+------+------+---------+--------+----------+---------+------+----------+--------+----+----------+----------+-----+
+    |  Modules  | Issue|      |      Latency     | Iteration|         | Trip |          |        |    |          |          |     |
+    |  & Loops  | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM  | DSP|    FF    |    LUT   | URAM|
+    +-----------+------+------+---------+--------+----------+---------+------+----------+--------+----+----------+----------+-----+
+    |+ execute  |     -|  1.76|        4|  40.000|         -|        5|     -|        no|  4 (4%)|   -|  63 (~0%)|  306 (2%)|    -|
+    +-----------+------+------+---------+--------+----------+---------+------+----------+--------+----+----------+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++-----------+---------+-----------+----------+
+| Port      | Mode    | Direction | Bitwidth |
++-----------+---------+-----------+----------+
+| ap_return |         | out       | 32       |
+| imd_data  | ap_none | in        | 32       |
+| opcode    | ap_none | in        | 4        |
+| ra_addr   | ap_none | in        | 5        |
+| rb_addr   | ap_none | in        | 5        |
+| rc_addr   | ap_none | in        | 5        |
++-----------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-------------+
+| Argument | Direction | Datatype    |
++----------+-----------+-------------+
+| opcode   | in        | ap_uint<4>  |
+| ra_addr  | in        | ap_uint<5>  |
+| rb_addr  | in        | ap_uint<5>  |
+| rc_addr  | in        | ap_uint<5>  |
+| imd_data | in        | ap_uint<32> |
+| return   | out       | ap_uint<32> |
++----------+-----------+-------------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+
+| Argument | HW Interface | HW Type |
++----------+--------------+---------+
+| opcode   | opcode       | port    |
+| ra_addr  | ra_addr      | port    |
+| rb_addr  | rb_addr      | port    |
+| rc_addr  | rc_addr      | port    |
+| imd_data | imd_data     | port    |
+| return   | ap_return    | port    |
++----------+--------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------+-----+--------+-------------+-------+--------+---------+
+| Name                    | DSP | Pragma | Variable    | Op    | Impl   | Latency |
++-------------------------+-----+--------+-------------+-------+--------+---------+
+| + execute               | 0   |        |             |       |        |         |
+|   result_4_fu_224_p2    |     |        | result_4    | seteq | auto   | 0       |
+|   result_3_fu_234_p2    |     |        | result_3    | or    | auto   | 0       |
+|   result_2_fu_240_p2    |     |        | result_2    | and   | auto   | 0       |
+|   result_1_fu_246_p2    |     |        | result_1    | sub   | fabric | 0       |
+|   result_fu_252_p2      |     |        | result      | add   | fabric | 0       |
+|   icmp_ln12_2_fu_276_p2 |     |        | icmp_ln12_2 | seteq | auto   | 0       |
+|   grp_fu_189_p2         |     |        | icmp_ln12_1 | seteq | auto   | 0       |
+|   grp_fu_189_p2         |     |        | icmp_ln12   | seteq | auto   | 0       |
++-------------------------+-----+--------+-------------+-------+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++---------------------------+---------+------+------+------+--------+-----------------------+------+---------+------------------+
+| Name                      | Usage   | Type | BRAM | URAM | Pragma | Variable              | Impl | Latency | Bitwidth, Depth, |
+|                           |         |      |      |      |        |                       |      |         | Banks            |
++---------------------------+---------+------+------+------+--------+-----------------------+------+---------+------------------+
+| + execute                 |         |      | 4    | 0    |        |                       |      |         |                  |
+|   lsm_instance_reg_file_U | ram_t2p |      | 2    |      |        | lsm_instance_reg_file | auto | 1       | 32, 32, 1        |
+|   lsm_instance_mem_U      | ram_1p  |      | 2    |      |        | lsm_instance_mem      | auto | 1       | 32, 1024, 1      |
++---------------------------+---------+------+------+------+--------+-----------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++--------+---------+---------------------------------+
+| Type   | Options | Location                        |
++--------+---------+---------------------------------+
+| INLINE |         | loadstore.cpp:5 in registerfile |
+| INLINE |         | loadstore.cpp:11 in write       |
+| INLINE |         | loadstore.cpp:18 in read        |
+| INLINE |         | loadstore.cpp:30 in add         |
+| INLINE |         | loadstore.cpp:35 in sub         |
+| INLINE |         | loadstore.cpp:40 in and_op      |
+| INLINE |         | loadstore.cpp:45 in or_op       |
+| INLINE |         | loadstore.cpp:50 in cmp         |
+| INLINE |         | loadstore.cpp:55 in compute     |
+| INLINE |         | loadstore.cpp:82 in memory      |
+| INLINE |         | loadstore.cpp:88 in read        |
+| INLINE |         | loadstore.cpp:93 in write       |
++--------+---------+---------------------------------+
+
+

@@ -1,0 +1,7 @@
+  CREATE_STREAM @0 {NAME:execute_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.execute_virtual_sqr STREAM:1964}
+  CREATE_STREAM @125000 {NAME:execute_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.env_master_svr_opcode.m_agt.sqr STREAM:2096}
+  CREATE_STREAM @125000 {NAME:execute_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.env_master_svr_ra_addr.m_agt.sqr STREAM:2106}
+  CREATE_STREAM @125000 {NAME:execute_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.env_master_svr_rb_addr.m_agt.sqr STREAM:2116}
+  CREATE_STREAM @125000 {NAME:execute_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.env_master_svr_rc_addr.m_agt.sqr STREAM:2126}
+  CREATE_STREAM @125000 {NAME:execute_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.env_master_svr_imd_data.m_agt.sqr STREAM:2136}
+  CREATE_STREAM @125000 {NAME:execute_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.env_slave_svr_ap_return.s_agt.sqr STREAM:2146}

@@ -1,0 +1,227 @@
+<ENTRY>
+{
+ "thisFile": "C:/Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\LoadStoreMachine\\LoadStoreMachine.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "11/22/25 20:34:55",
+ "timestampMillis": "1763836495456",
+ "buildStep": {
+  "cmdId": "23b48d47-c148-4001-a5eb-eab82a77b36e",
+  "name": "vitis-run",
+  "logFile": "C:/Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\LoadStoreMachine\\logs\\LoadStoreMachine.steps.log",
+  "commandLine": "C:/Xilinx/2025.1/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --cosim --config C:\\Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\hls_config.cfg --work_dir LoadStoreMachine ",
+  "args": [
+   "--mode",
+   "hls",
+   "--cosim",
+   "--config",
+   "C:\\Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\hls_config.cfg",
+   "--work_dir",
+   "LoadStoreMachine"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Projects\\Xilinx\\LoadStore\\LoadStoreMachine"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/22/25 20:34:55",
+ "timestampMillis": "1763836495457",
+ "status": {
+  "cmdId": "23b48d47-c148-4001-a5eb-eab82a77b36e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "11/22/25 20:35:00",
+ "timestampMillis": "1763836500235",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "execute",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\loadstore.cpp",
+     "C:/Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\loadstore.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "11/22/25 20:35:00",
+ "timestampMillis": "1763836500237",
+ "buildStep": {
+  "cmdId": "f428e914-ef22-4b60-8c1b-e7020bd5ad78",
+  "name": "",
+  "logFile": "C:/Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\LoadStoreMachine\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Projects\\Xilinx\\LoadStore\\LoadStoreMachine"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/22/25 20:35:00",
+ "timestampMillis": "1763836500237",
+ "status": {
+  "cmdId": "f428e914-ef22-4b60-8c1b-e7020bd5ad78",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/22/25 20:35:00",
+ "timestampMillis": "1763836500238",
+ "report": {
+  "path": "C:/Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\LoadStoreMachine\\hls\\sim\\report\\execute_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/22/25 20:35:00",
+ "timestampMillis": "1763836500239",
+ "report": {
+  "path": "C:/Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\LoadStoreMachine\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/22/25 20:35:00",
+ "timestampMillis": "1763836500239",
+ "report": {
+  "path": "C:/Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\LoadStoreMachine\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/22/25 20:35:00",
+ "timestampMillis": "1763836500240",
+ "report": {
+  "path": "C:/Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\LoadStoreMachine\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/22/25 20:35:00",
+ "timestampMillis": "1763836500241",
+ "report": {
+  "path": "C:/Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\LoadStoreMachine\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/22/25 20:35:52",
+ "timestampMillis": "1763836552894",
+ "status": {
+  "cmdId": "f428e914-ef22-4b60-8c1b-e7020bd5ad78",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/22/25 20:35:53",
+ "timestampMillis": "1763836553006",
+ "status": {
+  "cmdId": "23b48d47-c148-4001-a5eb-eab82a77b36e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/22/25 20:35:53",
+ "timestampMillis": "1763836553006",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/22/25 20:35:53",
+ "timestampMillis": "1763836553007",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -1,0 +1,603 @@
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine'.
+INFO: [HLS 200-1611] Setting target device to 'xc7z007s-clg225-2'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./loadstore.cpp' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/loadstore.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./loadstore.h' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/loadstore.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=./test_lsm.cpp' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/test_lsm.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=execute' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(12)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z007sclg225-2' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(8)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.rtl=vhdl' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=none' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/vitis-comp.json
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/2025.1/Vitis/win64/tools/vcxx/libexec/clang++"
+   Compiling test_lsm.cpp_pre.cpp.tb.cpp
+   Compiling loadstore.cpp_pre.cpp.tb.cpp
+   Compiling apatb_execute.cpp
+   Compiling apatb_execute_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Test 1: Register Write and Read
+
+$00: 0x00000000  0x0000000A  0x00000000  0x00000000  
+$04: 0x00000000  0x00000000  0x00000000  0x00000000  
+$08: 0x00000000  0x00000000  0x00000000  0x00000000  
+$12: 0x00000000  0x00000000  0x00000000  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+
+$00: 0x00000000  0x0000000A  0x00000014  0x00000000  
+$04: 0x00000000  0x00000000  0x00000000  0x00000000  
+$08: 0x00000000  0x00000000  0x00000000  0x00000000  
+$12: 0x00000000  0x00000000  0x00000000  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+PASSTest 2: ADD Operation (R3 = R1 + R2)
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x00000000  0x00000000  0x00000000  0x00000000  
+$08: 0x00000000  0x00000000  0x00000000  0x00000000  
+$12: 0x00000000  0x00000000  0x00000000  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+  R3 = 0x1E
+PASS
+Test 3: SUB Operation (R4 = R2 - R1)
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x00000000  0x00000000  0x00000000  
+$08: 0x00000000  0x00000000  0x00000000  0x00000000  
+$12: 0x00000000  0x00000000  0x00000000  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+  R4 = 0xA
+PASS
+Test 4: AND Operation (R5 = R1 AND 0x0F)
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x00000000  0x0000000F  0x00000000  
+$08: 0x00000000  0x00000000  0x00000000  0x00000000  
+$12: 0x00000000  0x00000000  0x00000000  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x0000000A  0x0000000F  0x00000000  
+$08: 0x00000000  0x00000000  0x00000000  0x00000000  
+$12: 0x00000000  0x00000000  0x00000000  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+  R5 = 0xA
+PASS
+Test 5: OR Operation (R7 = R1 OR 0xF0)
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x0000000A  0x0000000F  0x00000000  
+$08: 0x000000F0  0x00000000  0x00000000  0x00000000  
+$12: 0x00000000  0x00000000  0x00000000  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x0000000A  0x0000000F  0x000000FA  
+$08: 0x000000F0  0x00000000  0x00000000  0x00000000  
+$12: 0x00000000  0x00000000  0x00000000  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+  R7 = 0xFA
+PASS
+Test 6: Memory Write (mem[0] = 0x12345678)
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x0000000A  0x0000000F  0x000000FA  
+$08: 0x000000F0  0x00000000  0x12345678  0x00000000  
+$12: 0x00000000  0x00000000  0x00000000  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x0000000A  0x0000000F  0x000000FA  
+$08: 0x000000F0  0x00000000  0x12345678  0x00000000  
+$12: 0x00000000  0x00000000  0x00000000  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x0000000A  0x0000000F  0x000000FA  
+$08: 0x000000F0  0x00000000  0x12345678  0x00000000  
+$12: 0x00000000  0x00000000  0x00000000  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+  Memory[0] = 0x12345678
+PASS
+Test 7: Memory Read (R12 = mem[0])
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x0000000A  0x0000000F  0x000000FA  
+$08: 0x000000F0  0x00000000  0x12345678  0x00000000  
+$12: 0x00000000  0x00000000  0x00000000  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x0000000A  0x0000000F  0x000000FA  
+$08: 0x000000F0  0x00000000  0x12345678  0x12345678  
+$12: 0x00000000  0x00000000  0x00000000  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+  R12 = 0x12345678
+PASS
+Test 8: Sequential Operations
+  Step 1: R13 = 5 + 3
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x0000000A  0x0000000F  0x000000FA  
+$08: 0x000000F0  0x00000000  0x12345678  0x12345678  
+$12: 0x00000000  0x00000000  0x00000005  0x00000000  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x0000000A  0x0000000F  0x000000FA  
+$08: 0x000000F0  0x00000000  0x12345678  0x12345678  
+$12: 0x00000000  0x00000000  0x00000005  0x00000003  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x0000000A  0x0000000F  0x000000FA  
+$08: 0x000000F0  0x00000000  0x12345678  0x12345678  
+$12: 0x00000000  0x00000008  0x00000005  0x00000003  
+$16: 0x00000000  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+    Result: 0x8
+  Step 2: R16 = R13 * 2 (via ADD R13 + R13)
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x0000000A  0x0000000F  0x000000FA  
+$08: 0x000000F0  0x00000000  0x12345678  0x12345678  
+$12: 0x00000000  0x00000008  0x00000005  0x00000003  
+$16: 0x00000010  0x00000000  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+    Result: 0x10
+  Step 3: mem[10] = R16
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x0000000A  0x0000000F  0x000000FA  
+$08: 0x000000F0  0x00000000  0x12345678  0x12345678  
+$12: 0x00000000  0x00000008  0x00000005  0x00000003  
+$16: 0x00000010  0x0000000A  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x0000000A  0x0000000F  0x000000FA  
+$08: 0x000000F0  0x00000000  0x12345678  0x12345678  
+$12: 0x00000000  0x00000008  0x00000005  0x00000003  
+$16: 0x00000010  0x0000000A  0x00000000  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+    Result: 0x10
+  Step 4: R18 = mem[10]
+
+$00: 0x00000000  0x0000000A  0x00000014  0x0000001E  
+$04: 0x0000000A  0x0000000A  0x0000000F  0x000000FA  
+$08: 0x000000F0  0x00000000  0x12345678  0x12345678  
+$12: 0x00000000  0x00000008  0x00000005  0x00000003  
+$16: 0x00000010  0x0000000A  0x00000010  0x00000000  
+$20: 0x00000000  0x00000000  0x00000000  0x00000000  
+$24: 0x00000000  0x00000000  0x00000000  0x00000000  
+$28: 0x00000000  0x00000000  0x00000000  0x00000000  
+    Result: 0x10 (expected 0x10 = 16)
+PASS
+
+Test Results: 8/8 tests passed
+ALL TEST PASSED!
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-322] Starting VHDL simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+
+C:\Projects\Xilinx\LoadStore\LoadStoreMachine\LoadStoreMachine\hls\sim\vhdl>set PATH= 
+
+C:\Projects\Xilinx\LoadStore\LoadStoreMachine\LoadStoreMachine\hls\sim\vhdl>call C:/Xilinx/2025.1/Vivado/bin/xelab xil_defaultlib.apatb_execute_top glbl -Oenable_linking_all_libraries -prj execute.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims -L unisims_ver -L xpm  -L floating_point_v7_1_20 -L floating_point_v7_0_25 --lib "ieee_proposed=./ieee_proposed" -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./execute_subsystem -s execute  
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_execute_top glbl -Oenable_linking_all_libraries -prj execute.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims -L unisims_ver -L xpm -L floating_point_v7_1_20 -L floating_point_v7_0_25 --lib ieee_proposed=./ieee_proposed -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./execute_subsystem -s execute 
+Multi-threading is on. Using 14 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/execute.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_execute_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/file_agent/file_agent_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/svr/svr_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/svr/svr_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/execute_subsystem/execute_subsystem_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/svtb/misc_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/svtb/sv_module_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv_module_top
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/AESL_sim_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/execute.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'execute'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/execute_lsm_instance_mem_RAM_AUTO_1R1W.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'execute_lsm_instance_mem_RAM_AUTO_1R1W'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/sim/vhdl/execute_lsm_instance_reg_file_RAM_AUTO_1R1W.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'execute_lsm_instance_reg_file_RAM_AUTO_1R1W'
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4468] File : /proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv, Line : 25994, RANDC variable size more than 8 bits. This will be treated as a RAND variable instead.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.$unit_sv_module_top_sv
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.svr_pkg
+Compiling package xil_defaultlib.file_agent_pkg
+Compiling package xil_defaultlib.execute_subsystem_pkg
+Compiling architecture rtl of entity xil_defaultlib.execute_lsm_instance_reg_file_RAM_AUTO_1R1W [\execute_lsm_instance_reg_file_R...]
+Compiling architecture rtl of entity xil_defaultlib.execute_lsm_instance_mem_RAM_AUTO_1R1W [\execute_lsm_instance_mem_RAM_AU...]
+Compiling architecture behav of entity xil_defaultlib.execute [execute_default]
+Compiling module xil_defaultlib.misc_interface_default
+Compiling module xil_defaultlib.svr_if(DATA_WIDTH=4)
+Compiling module xil_defaultlib.svr_if(DATA_WIDTH=5)
+Compiling module xil_defaultlib.svr_if_default
+Compiling module xil_defaultlib.sv_module_top
+Compiling module xil_defaultlib.apatb_execute_top
+Compiling module work.glbl
+Built simulation snapshot execute
+
+****** xsim v2025.1 (64-bit)
+  **** SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Sat Nov 22 20:35:47 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/execute/xsim_script.tcl
+# xsim {execute} -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=execute_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -autoloadwcfg -tclbatch {execute.tcl}
+Time resolution is 1 ps
+source execute.tcl
+## run all
+UVM_INFO C:/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO C:/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO C:/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+---------------------------------------------------------------------------------------------------------------
+Name                                               Type                                  Size  Value           
+---------------------------------------------------------------------------------------------------------------
+uvm_test_top                                       execute_test_lib                      -     @359            
+  top_env                                          execute_env                           -     @370            
+    env_master_svr_imd_data                        uvm_env                               -     @440            
+      m_agt                                        uvm_agent                             -     @680            
+        drv                                        uvm_driver #(REQ,RSP)                 -     @828            
+          rsp_port                                 uvm_analysis_port                     -     @847            
+          seq_item_port                            uvm_seq_item_pull_port                -     @837            
+        mon                                        uvm_monitor                           -     @857            
+          item_collect_port                        uvm_analysis_port                     -     @868            
+        sqr                                        uvm_sequencer                         -     @691            
+          rsp_export                               uvm_analysis_export                   -     @700            
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @818            
+          arbitration_queue                        array                                 0     -               
+          lock_queue                               array                                 0     -               
+          num_last_reqs                            integral                              32    'd1             
+          num_last_rsps                            integral                              32    'd1             
+    env_master_svr_opcode                          uvm_env                               -     @397            
+      m_agt                                        uvm_agent                             -     @886            
+        drv                                        uvm_driver #(REQ,RSP)                 -     @1034           
+          rsp_port                                 uvm_analysis_port                     -     @1053           
+          seq_item_port                            uvm_seq_item_pull_port                -     @1043           
+        mon                                        uvm_monitor                           -     @1063           
+          item_collect_port                        uvm_analysis_port                     -     @1074           
+        sqr                                        uvm_sequencer                         -     @897            
+          rsp_export                               uvm_analysis_export                   -     @906            
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @1024           
+          arbitration_queue                        array                                 0     -               
+          lock_queue                               array                                 0     -               
+          num_last_reqs                            integral                              32    'd1             
+          num_last_rsps                            integral                              32    'd1             
+    env_master_svr_ra_addr                         uvm_env                               -     @410            
+      m_agt                                        uvm_agent                             -     @1092           
+        drv                                        uvm_driver #(REQ,RSP)                 -     @1240           
+          rsp_port                                 uvm_analysis_port                     -     @1259           
+          seq_item_port                            uvm_seq_item_pull_port                -     @1249           
+        mon                                        uvm_monitor                           -     @1269           
+          item_collect_port                        uvm_analysis_port                     -     @1280           
+        sqr                                        uvm_sequencer                         -     @1103           
+          rsp_export                               uvm_analysis_export                   -     @1112           
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @1230           
+          arbitration_queue                        array                                 0     -               
+          lock_queue                               array                                 0     -               
+          num_last_reqs                            integral                              32    'd1             
+          num_last_rsps                            integral                              32    'd1             
+    env_master_svr_rb_addr                         uvm_env                               -     @420            
+      m_agt                                        uvm_agent                             -     @1298           
+        drv                                        uvm_driver #(REQ,RSP)                 -     @1446           
+          rsp_port                                 uvm_analysis_port                     -     @1465           
+          seq_item_port                            uvm_seq_item_pull_port                -     @1455           
+        mon                                        uvm_monitor                           -     @1475           
+          item_collect_port                        uvm_analysis_port                     -     @1486           
+        sqr                                        uvm_sequencer                         -     @1309           
+          rsp_export                               uvm_analysis_export                   -     @1318           
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @1436           
+          arbitration_queue                        array                                 0     -               
+          lock_queue                               array                                 0     -               
+          num_last_reqs                            integral                              32    'd1             
+          num_last_rsps                            integral                              32    'd1             
+    env_master_svr_rc_addr                         uvm_env                               -     @430            
+      m_agt                                        uvm_agent                             -     @1504           
+        drv                                        uvm_driver #(REQ,RSP)                 -     @1652           
+          rsp_port                                 uvm_analysis_port                     -     @1671           
+          seq_item_port                            uvm_seq_item_pull_port                -     @1661           
+        mon                                        uvm_monitor                           -     @1681           
+          item_collect_port                        uvm_analysis_port                     -     @1692           
+        sqr                                        uvm_sequencer                         -     @1515           
+          rsp_export                               uvm_analysis_export                   -     @1524           
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @1642           
+          arbitration_queue                        array                                 0     -               
+          lock_queue                               array                                 0     -               
+          num_last_reqs                            integral                              32    'd1             
+          num_last_rsps                            integral                              32    'd1             
+    env_slave_svr_ap_return                        uvm_env                               -     @450            
+      s_agt                                        uvm_agent                             -     @1710           
+        drv                                        uvm_driver #(REQ,RSP)                 -     @1858           
+          rsp_port                                 uvm_analysis_port                     -     @1877           
+          seq_item_port                            uvm_seq_item_pull_port                -     @1867           
+        mon                                        uvm_monitor                           -     @1887           
+          item_collect_port                        uvm_analysis_port                     -     @1898           
+        sqr                                        uvm_sequencer                         -     @1721           
+          rsp_export                               uvm_analysis_export                   -     @1730           
+          seq_item_export                          uvm_seq_item_pull_imp                 -     @1848           
+          arbitration_queue                        array                                 0     -               
+          lock_queue                               array                                 0     -               
+          num_last_reqs                            integral                              32    'd1             
+          num_last_rsps                            integral                              32    'd1             
+    execute_virtual_sqr                            execute_virtual_sequencer             -     @542            
+      rsp_export                                   uvm_analysis_export                   -     @551            
+      seq_item_export                              uvm_seq_item_pull_imp                 -     @669            
+      arbitration_queue                            array                                 0     -               
+      lock_queue                                   array                                 0     -               
+      num_last_reqs                                integral                              32    'd1             
+      num_last_rsps                                integral                              32    'd1             
+    refm                                           execute_reference_model               -     @460            
+      trans_num_idx                                integral                              32    'h0             
+    subsys_mon                                     execute_subsystem_monitor             -     @473            
+      scbd                                         execute_scoreboard                    -     @1925           
+        refm                                       execute_reference_model               -     @460            
+          trans_num_idx                            integral                              32    'h0             
+        TVOUT_transaction_size_queue               da(integral)                          0     -               
+        file_wr_port_ap_return_ap_return           <unknown>                             -     @1935           
+          TV_FILE                                  string                                0     ""              
+          fp                                       integral                              32    'hxxxxxxxx      
+          file_open                                integral                              32    'h0             
+          write_file_done                          integral                              32    'h0             
+          write_section_done                       integral                              32    'h0             
+          TRANSACTION_NUM                          integral                              32    'h0             
+          transaction_num_idx                      integral                              32    'h0             
+          TRANSACTION_DEPTH                        integral                              32    'h0             
+          TRANSACTION_DEPTH_queue                  da(integral)                          0     -               
+          TRANSACTION_DEPTH_queue_for_depth_check  da(integral)                          0     -               
+          transaction_depth_idx                    integral                              32    'h0             
+          ap_done_num_idx                          integral                              32    'h0             
+          is_binary                                integral                              32    'h0             
+        write_file_done_ap_return_ap_return        integral                              32    'h0             
+        write_section_done_ap_return_ap_return     integral                              32    'h0             
+      svr_master_imd_data_imp                      uvm_analysis_imp_svr_master_imd_data  -     @522            
+      svr_master_opcode_imp                        uvm_analysis_imp_svr_master_opcode    -     @482            
+      svr_master_ra_addr_imp                       uvm_analysis_imp_svr_master_ra_addr   -     @492            
+      svr_master_rb_addr_imp                       uvm_analysis_imp_svr_master_rb_addr   -     @502            
+      svr_master_rc_addr_imp                       uvm_analysis_imp_svr_master_rc_addr   -     @512            
+      svr_slave_ap_return_imp                      uvm_analysis_imp_svr_slave_ap_return  -     @532            
+    env_master_svr_opcode                          uvm_env                               -     @397            
+    env_master_svr_ra_addr                         uvm_env                               -     @410            
+    env_master_svr_rb_addr                         uvm_env                               -     @420            
+    env_master_svr_rc_addr                         uvm_env                               -     @430            
+    env_master_svr_imd_data                        uvm_env                               -     @440            
+    env_slave_svr_ap_return                        uvm_env                               -     @450            
+    refm                                           execute_reference_model               -     @460            
+    execute_virtual_sqr                            execute_virtual_sequencer             -     @542            
+    execute_cfg                                    execute_config                        -     @384            
+      port_opcode_cfg                              svr_config                            -     @385            
+        svr_type                                   svr_inst_type                         32    SVR_MASTER      
+        prt_type                                   svr_protocol_type                     32    AP_NONE         
+        is_active                                  svr_active_passive_enum               1     SVR_ACTIVE      
+        reset_level                                svr_reset_level_enum                  1     RESET_LEVEL_HIGH
+        spec_cfg                                   svr_spec_cfg_enum                     32    NORMAL          
+        clatency                                   svr_latency                           -     @386            
+          transfer_latency                         integral                              32    'h0             
+      port_ra_addr_cfg                             svr_config                            -     @387            
+        svr_type                                   svr_inst_type                         32    SVR_MASTER      
+        prt_type                                   svr_protocol_type                     32    AP_NONE         
+        is_active                                  svr_active_passive_enum               1     SVR_ACTIVE      
+        reset_level                                svr_reset_level_enum                  1     RESET_LEVEL_HIGH
+        spec_cfg                                   svr_spec_cfg_enum                     32    NORMAL          
+        clatency                                   svr_latency                           -     @388            
+          transfer_latency                         integral                              32    'h0             
+      port_rb_addr_cfg                             svr_config                            -     @389            
+        svr_type                                   svr_inst_type                         32    SVR_MASTER      
+        prt_type                                   svr_protocol_type                     32    AP_NONE         
+        is_active                                  svr_active_passive_enum               1     SVR_ACTIVE      
+        reset_level                                svr_reset_level_enum                  1     RESET_LEVEL_HIGH
+        spec_cfg                                   svr_spec_cfg_enum                     32    NORMAL          
+        clatency                                   svr_latency                           -     @390            
+          transfer_latency                         integral                              32    'h0             
+      port_rc_addr_cfg                             svr_config                            -     @391            
+        svr_type                                   svr_inst_type                         32    SVR_MASTER      
+        prt_type                                   svr_protocol_type                     32    AP_NONE         
+        is_active                                  svr_active_passive_enum               1     SVR_ACTIVE      
+        reset_level                                svr_reset_level_enum                  1     RESET_LEVEL_HIGH
+        spec_cfg                                   svr_spec_cfg_enum                     32    NORMAL          
+        clatency                                   svr_latency                           -     @392            
+          transfer_latency                         integral                              32    'h0             
+      port_imd_data_cfg                            svr_config                            -     @393            
+        svr_type                                   svr_inst_type                         32    SVR_MASTER      
+        prt_type                                   svr_protocol_type                     32    AP_NONE         
+        is_active                                  svr_active_passive_enum               1     SVR_ACTIVE      
+        reset_level                                svr_reset_level_enum                  1     RESET_LEVEL_HIGH
+        spec_cfg                                   svr_spec_cfg_enum                     32    NORMAL          
+        clatency                                   svr_latency                           -     @394            
+          transfer_latency                         integral                              32    'h0             
+      port_ap_return_cfg                           svr_config                            -     @395            
+        svr_type                                   svr_inst_type                         32    SVR_SLAVE       
+        prt_type                                   svr_protocol_type                     32    AP_NONE         
+        is_active                                  svr_active_passive_enum               1     SVR_ACTIVE      
+        reset_level                                svr_reset_level_enum                  1     RESET_LEVEL_HIGH
+        spec_cfg                                   svr_spec_cfg_enum                     32    NORMAL          
+        clatency                                   svr_latency                           -     @396            
+          transfer_latency                         integral                              32    'h0             
+      check_ena                                    integral                              32    'h0             
+      cover_ena                                    integral                              32    'h0             
+---------------------------------------------------------------------------------------------------------------
+
+UVM_INFO C:/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 20 [0.00%] @ "125000"
+// RTL Simulation : 1 / 20 [100.00%] @ "205000"
+// RTL Simulation : 2 / 20 [100.00%] @ "255000"
+// RTL Simulation : 3 / 20 [100.00%] @ "305000"
+// RTL Simulation : 4 / 20 [100.00%] @ "355000"
+// RTL Simulation : 5 / 20 [100.00%] @ "405000"
+// RTL Simulation : 6 / 20 [100.00%] @ "455000"
+// RTL Simulation : 7 / 20 [100.00%] @ "505000"
+// RTL Simulation : 8 / 20 [100.00%] @ "555000"
+// RTL Simulation : 9 / 20 [100.00%] @ "605000"
+// RTL Simulation : 10 / 20 [100.00%] @ "655000"
+// RTL Simulation : 11 / 20 [100.00%] @ "705000"
+// RTL Simulation : 12 / 20 [100.00%] @ "755000"
+// RTL Simulation : 13 / 20 [100.00%] @ "805000"
+// RTL Simulation : 14 / 20 [100.00%] @ "855000"
+// RTL Simulation : 15 / 20 [100.00%] @ "905000"
+// RTL Simulation : 16 / 20 [100.00%] @ "955000"
+// RTL Simulation : 17 / 20 [100.00%] @ "1005000"
+// RTL Simulation : 18 / 20 [100.00%] @ "1055000"
+// RTL Simulation : 19 / 20 [100.00%] @ "1105000"
+// RTL Simulation : 20 / 20 [100.00%] @ "1155000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 1225 ns : File "C:/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Nov 22 20:35:51 2025...
+INFO: [COSIM 212-316] Starting C post checking ...
+Test 1: Register Write and Read
+PASSTest 2: ADD Operation (R3 = R1 + R2)
+  R3 = 0x1E
+PASS
+Test 3: SUB Operation (R4 = R2 - R1)
+  R4 = 0xA
+PASS
+Test 4: AND Operation (R5 = R1 AND 0x0F)
+  R5 = 0xA
+PASS
+Test 5: OR Operation (R7 = R1 OR 0xF0)
+  R7 = 0xFA
+PASS
+Test 6: Memory Write (mem[0] = 0x12345678)
+  Memory[0] = 0x12345678
+PASS
+Test 7: Memory Read (R12 = mem[0])
+  R12 = 0x12345678
+PASS
+Test 8: Sequential Operations
+  Step 1: R13 = 5 + 3
+    Result: 0x8
+  Step 2: R16 = R13 * 2 (via ADD R13 + R13)
+    Result: 0x10
+  Step 3: mem[10] = R16
+    Result: 0x10
+  Step 4: R18 = mem[10]
+    Result: 0x10 (expected 0x10 = 16)
+PASS
+
+Test Results: 8/8 tests passed
+ALL TEST PASSED!
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 55.02 seconds; peak allocated memory: 208.078 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 1m 0s

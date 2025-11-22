@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "C:\\Projects\\Xilinx\\LoadStore\\LoadStoreMachine",
+    "arguments": [
+      "C:\\Xilinx\\2025.1\\Vitis\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\2025.1\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=C:\\Xilinx\\2025.1\\Vitis\\common\\technology\\autopilot",
+      "-fhlstoplevel=execute",
+      "-c",
+      "C:\\Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\.\\loadstore.cpp"
+    ],
+    "file": "C:\\Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\.\\loadstore.cpp"
+  },
+  {
+    "directory": "C:\\Projects\\Xilinx\\LoadStore\\LoadStoreMachine",
+    "arguments": [
+      "C:\\Xilinx\\2025.1\\Vitis\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=C:\\Xilinx\\2025.1\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=C:\\Xilinx\\2025.1\\Vitis\\include",
+      "-c",
+      "C:\\Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\.\\test_lsm.cpp"
+    ],
+    "file": "C:\\Projects\\Xilinx\\LoadStore\\LoadStoreMachine\\.\\test_lsm.cpp"
+  }
+]

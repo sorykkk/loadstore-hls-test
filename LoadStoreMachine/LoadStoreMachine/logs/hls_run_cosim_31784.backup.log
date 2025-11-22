@@ -1,0 +1,53 @@
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine'.
+INFO: [HLS 200-1611] Setting target device to 'xc7z007s-clg225-2'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./loadstore.cpp' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/loadstore.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./loadstore.h' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/loadstore.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=./test_lsm.cpp' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/test_lsm.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=execute' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(12)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z007sclg225-2' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(8)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/vitis-comp.json
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/2025.1/Vitis/win64/tools/vcxx/libexec/clang++"
+   Compiling test_lsm.cpp_pre.cpp.tb.cpp
+cosim.tv.mk:90: recipe for target 'obj/test_lsm.cpp_pre.cpp.tb.o' failed
+In file included from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/test_lsm.cpp:1:
+C:/Projects/Xilinx/LoadStore/LoadStoreMachine/loadstore.h:10:9: error: no template named 'ap_uint'
+typedef ap_uint<32> data_t;
+        ^
+C:/Projects/Xilinx/LoadStore/LoadStoreMachine/loadstore.h:11:9: error: no template named 'ap_uint'
+typedef ap_uint<10> addr_t;
+        ^
+C:/Projects/Xilinx/LoadStore/LoadStoreMachine/loadstore.h:12:9: error: no template named 'ap_uint'
+typedef ap_uint<4> opcode_t;
+        ^
+C:/Projects/Xilinx/LoadStore/LoadStoreMachine/loadstore.h:13:9: error: no template named 'ap_uint'
+typedef ap_uint<5> reg_addr_t;
+        ^
+4 errors generated.
+make: *** [obj/test_lsm.cpp_pre.cpp.tb.o] Error 1
+ERROR: [COSIM 212-317] C++ compile error.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-331] Aborting co-simulation: C simulation failed, compilation errors.
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+ERROR: 
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 1 seconds. Total elapsed time: 15.105 seconds; peak allocated memory: 203.414 MB.

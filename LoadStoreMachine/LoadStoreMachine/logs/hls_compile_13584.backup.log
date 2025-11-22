@@ -1,0 +1,95 @@
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./loadstore.cpp' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/loadstore.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./loadstore.h' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/loadstore.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=./test_lsm.cpp' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file 'C:/Projects/Xilinx/LoadStore/LoadStoreMachine/test_lsm.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=execute' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(12)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z007sclg225-2' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z007s-clg225-2'
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=27%' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(8)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying config ini 'cosim.rtl=vhdl' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying config ini 'cosim.trace_level=all' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from C:/Projects/Xilinx/LoadStore/LoadStoreMachine/hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 2 seconds. Elapsed time: 7.572 seconds; current allocated memory: 135.594 MB.
+INFO: [HLS 200-10] Analyzing design file 'loadstore.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 14.991 seconds; current allocated memory: 138.082 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 447 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 27 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 37 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 38 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (C:/Projects/Xilinx/LoadStore/LoadStoreMachine/LoadStoreMachine/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function 'ALU::or_op(ap_uint<32>, ap_uint<32>)' into 'ALU::execute(ap_uint<32>, ap_uint<32>, ap_uint<4>)' (loadstore.cpp:62:22)
+INFO: [HLS 214-131] Inlining function 'ALU::and_op(ap_uint<32>, ap_uint<32>)' into 'ALU::execute(ap_uint<32>, ap_uint<32>, ap_uint<4>)' (loadstore.cpp:59:22)
+INFO: [HLS 214-131] Inlining function 'ALU::sub(ap_uint<32>, ap_uint<32>)' into 'ALU::execute(ap_uint<32>, ap_uint<32>, ap_uint<4>)' (loadstore.cpp:56:22)
+INFO: [HLS 214-131] Inlining function 'ALU::add(ap_uint<32>, ap_uint<32>)' into 'ALU::execute(ap_uint<32>, ap_uint<32>, ap_uint<4>)' (loadstore.cpp:53:22)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 16.286 seconds; current allocated memory: 139.918 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.006 seconds; current allocated memory: 139.922 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.158 seconds; current allocated memory: 143.598 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.043 seconds; current allocated memory: 145.168 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (loadstore.cpp:69:5) in function 'ALU::execute'... converting 6 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 165.855 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.077 seconds; current allocated memory: 165.859 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'execute' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'execute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.258 seconds; current allocated memory: 165.859 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.053 seconds; current allocated memory: 165.859 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'execute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'execute/agg_result' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'execute/this_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'execute/a' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'execute/b' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'execute/opcode' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'execute' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'execute/this_r' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_11_4_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'execute'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.095 seconds; current allocated memory: 165.859 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.498 seconds; current allocated memory: 168.309 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.198 seconds; current allocated memory: 169.836 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for execute.
+INFO: [VLOG 209-307] Generating Verilog RTL for execute.
+INFO: [HLS 200-789] **** Estimated Fmax: 307.87 MHz
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 2 seconds. Total elapsed time: 42.504 seconds; peak allocated memory: 169.988 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 49s

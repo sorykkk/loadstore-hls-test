@@ -1,0 +1,93 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="loadstore.cpp:5:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="RegisterFile" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="loadstore.cpp:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="loadstore.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="loadstore.cpp:30:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="add" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="loadstore.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="sub" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="loadstore.cpp:40:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_op" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="loadstore.cpp:45:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_op" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="loadstore.cpp:50:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="cmp" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="loadstore.cpp:55:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="loadstore.cpp:82:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Memory" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="loadstore.cpp:88:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="loadstore.cpp:93:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="execute" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=execute" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="loadstore.cpp:71:22" msg_body="Inlining function 'ALU::cmp(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;)' into 'ALU::compute(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;, ap_uint&lt;4&gt;)'">
+        <args Callee="ALU::cmp(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;)" Callee-DebugLoc="File loadstore.cpp Line 49 Column 0" Caller="ALU::compute(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;, ap_uint&lt;4&gt;)" Caller-DebugLoc="File loadstore.cpp Line 54 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="loadstore.cpp:68:22" msg_body="Inlining function 'ALU::or_op(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;)' into 'ALU::compute(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;, ap_uint&lt;4&gt;)'">
+        <args Callee="ALU::or_op(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;)" Callee-DebugLoc="File loadstore.cpp Line 44 Column 0" Caller="ALU::compute(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;, ap_uint&lt;4&gt;)" Caller-DebugLoc="File loadstore.cpp Line 54 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="loadstore.cpp:65:22" msg_body="Inlining function 'ALU::and_op(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;)' into 'ALU::compute(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;, ap_uint&lt;4&gt;)'">
+        <args Callee="ALU::and_op(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;)" Callee-DebugLoc="File loadstore.cpp Line 39 Column 0" Caller="ALU::compute(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;, ap_uint&lt;4&gt;)" Caller-DebugLoc="File loadstore.cpp Line 54 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="loadstore.cpp:62:22" msg_body="Inlining function 'ALU::sub(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;)' into 'ALU::compute(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;, ap_uint&lt;4&gt;)'">
+        <args Callee="ALU::sub(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;)" Callee-DebugLoc="File loadstore.cpp Line 34 Column 0" Caller="ALU::compute(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;, ap_uint&lt;4&gt;)" Caller-DebugLoc="File loadstore.cpp Line 54 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="loadstore.cpp:59:22" msg_body="Inlining function 'ALU::add(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;)' into 'ALU::compute(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;, ap_uint&lt;4&gt;)'">
+        <args Callee="ALU::add(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;)" Callee-DebugLoc="File loadstore.cpp Line 29 Column 0" Caller="ALU::compute(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;, ap_uint&lt;4&gt;)" Caller-DebugLoc="File loadstore.cpp Line 54 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="loadstore.cpp:145:22" msg_body="Inlining function 'RegisterFile::write(ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)' into 'LSM::execute_op(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)'">
+        <args Callee="RegisterFile::write(ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)" Callee-DebugLoc="File loadstore.cpp Line 10 Column 0" Caller="LSM::execute_op(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)" Caller-DebugLoc="File loadstore.cpp Line 113 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="loadstore.cpp:141:17" msg_body="Inlining function 'Memory::write(ap_uint&lt;10&gt;, ap_uint&lt;32&gt;)' into 'LSM::execute_op(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)'">
+        <args Callee="Memory::write(ap_uint&lt;10&gt;, ap_uint&lt;32&gt;)" Callee-DebugLoc="File loadstore.cpp Line 92 Column 0" Caller="LSM::execute_op(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)" Caller-DebugLoc="File loadstore.cpp Line 113 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="loadstore.cpp:135:27" msg_body="Inlining function 'Memory::read(ap_uint&lt;10&gt;)' into 'LSM::execute_op(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)'">
+        <args Callee="Memory::read(ap_uint&lt;10&gt;)" Callee-DebugLoc="File loadstore.cpp Line 87 Column 0" Caller="LSM::execute_op(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)" Caller-DebugLoc="File loadstore.cpp Line 113 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="loadstore.cpp:128:27" msg_body="Inlining function 'ALU::compute(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;, ap_uint&lt;4&gt;)' into 'LSM::execute_op(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)'">
+        <args Callee="ALU::compute(ap_uint&lt;32&gt;, ap_uint&lt;32&gt;, ap_uint&lt;4&gt;)" Callee-DebugLoc="File loadstore.cpp Line 54 Column 0" Caller="LSM::execute_op(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)" Caller-DebugLoc="File loadstore.cpp Line 113 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="loadstore.cpp:118:29" msg_body="Inlining function 'RegisterFile::read(ap_uint&lt;5&gt;)' into 'LSM::execute_op(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)'">
+        <args Callee="RegisterFile::read(ap_uint&lt;5&gt;)" Callee-DebugLoc="File loadstore.cpp Line 17 Column 0" Caller="LSM::execute_op(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)" Caller-DebugLoc="File loadstore.cpp Line 113 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="loadstore.cpp:171:21" msg_body="Inlining function 'RegisterFile::read(ap_uint&lt;5&gt;)' into 'LSM::get_register(ap_uint&lt;5&gt;)'">
+        <args Callee="RegisterFile::read(ap_uint&lt;5&gt;)" Callee-DebugLoc="File loadstore.cpp Line 17 Column 0" Caller="LSM::get_register(ap_uint&lt;5&gt;)" Caller-DebugLoc="File loadstore.cpp Line 170 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="loadstore.cpp:175:16" msg_body="Inlining function 'Memory::read(ap_uint&lt;10&gt;)' into 'LSM::get_mem(ap_uint&lt;10&gt;)'">
+        <args Callee="Memory::read(ap_uint&lt;10&gt;)" Callee-DebugLoc="File loadstore.cpp Line 87 Column 0" Caller="LSM::get_mem(ap_uint&lt;10&gt;)" Caller-DebugLoc="File loadstore.cpp Line 174 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="loadstore.cpp:159:0" msg_body="Inlining function 'LSM::get_register(ap_uint&lt;5&gt;)' into 'LSM::print_registers()'">
+        <args Callee="LSM::get_register(ap_uint&lt;5&gt;)" Callee-DebugLoc="File loadstore.cpp Line 170 Column 0" Caller="LSM::print_registers()" Caller-DebugLoc="File loadstore.cpp Line 159 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="loadstore.cpp:185:0" msg_body="Inlining function 'LSM::execute_op(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)' into 'execute(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)'">
+        <args Callee="LSM::execute_op(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)" Callee-DebugLoc="File loadstore.cpp Line 113 Column 0" Caller="execute(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)" Caller-DebugLoc="File loadstore.cpp Line 185 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="loadstore.cpp:185:0" msg_body="Inlining function 'LSM::get_register(ap_uint&lt;5&gt;)' into 'execute(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)'">
+        <args Callee="LSM::get_register(ap_uint&lt;5&gt;)" Callee-DebugLoc="File loadstore.cpp Line 170 Column 0" Caller="execute(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)" Caller-DebugLoc="File loadstore.cpp Line 185 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="loadstore.cpp:185:0" msg_body="Inlining function 'LSM::get_mem(ap_uint&lt;10&gt;)' into 'execute(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)'">
+        <args Callee="LSM::get_mem(ap_uint&lt;10&gt;)" Callee-DebugLoc="File loadstore.cpp Line 174 Column 0" Caller="execute(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)" Caller-DebugLoc="File loadstore.cpp Line 185 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="loadstore.cpp:185:0" msg_body="Inlining function 'LSM::print_registers()' into 'execute(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)'">
+        <args Callee="LSM::print_registers()" Callee-DebugLoc="File loadstore.cpp Line 159 Column 0" Caller="execute(ap_uint&lt;4&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;5&gt;, ap_uint&lt;32&gt;)" Caller-DebugLoc="File loadstore.cpp Line 185 Column 0"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

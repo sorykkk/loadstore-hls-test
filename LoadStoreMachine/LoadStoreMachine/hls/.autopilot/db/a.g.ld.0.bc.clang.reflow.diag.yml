@@ -1,0 +1,405 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: loadstore.cpp, Line: 103, Column: 14 }
+Function:        _ZN3LSMC2Ev
+Args:            
+  - Callee:          'RegisterFile::reset()'
+    DebugLoc:        { File: loadstore.cpp, Line: 22, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'LSM::LSM()'
+    DebugLoc:        { File: loadstore.cpp, Line: 102, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: loadstore.cpp, Line: 104, Column: 9 }
+Function:        _ZN3LSMC2Ev
+Args:            
+  - Callee:          'Memory::reset()'
+    DebugLoc:        { File: loadstore.cpp, Line: 97, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'LSM::LSM()'
+    DebugLoc:        { File: loadstore.cpp, Line: 102, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: loadstore.cpp, Line: 71, Column: 22 }
+Function:        _ZN3ALU7computeE7ap_uintILi32EES1_S0_ILi4EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ALU::cmp(ap_uint<32>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 49, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ALU::compute(ap_uint<32>, ap_uint<32>, ap_uint<4>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 54, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: loadstore.cpp, Line: 68, Column: 22 }
+Function:        _ZN3ALU7computeE7ap_uintILi32EES1_S0_ILi4EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ALU::or_op(ap_uint<32>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 44, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ALU::compute(ap_uint<32>, ap_uint<32>, ap_uint<4>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 54, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: loadstore.cpp, Line: 65, Column: 22 }
+Function:        _ZN3ALU7computeE7ap_uintILi32EES1_S0_ILi4EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ALU::and_op(ap_uint<32>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 39, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ALU::compute(ap_uint<32>, ap_uint<32>, ap_uint<4>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 54, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: loadstore.cpp, Line: 62, Column: 22 }
+Function:        _ZN3ALU7computeE7ap_uintILi32EES1_S0_ILi4EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ALU::sub(ap_uint<32>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 34, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ALU::compute(ap_uint<32>, ap_uint<32>, ap_uint<4>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 54, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: loadstore.cpp, Line: 59, Column: 22 }
+Function:        _ZN3ALU7computeE7ap_uintILi32EES1_S0_ILi4EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ALU::add(ap_uint<32>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 29, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ALU::compute(ap_uint<32>, ap_uint<32>, ap_uint<4>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 54, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: loadstore.cpp, Line: 145, Column: 22 }
+Function:        _ZN3LSM10execute_opE7ap_uintILi4EES0_ILi5EES2_S2_S0_ILi32EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'RegisterFile::write(ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 10, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'LSM::execute_op(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 113, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: loadstore.cpp, Line: 141, Column: 17 }
+Function:        _ZN3LSM10execute_opE7ap_uintILi4EES0_ILi5EES2_S2_S0_ILi32EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Memory::write(ap_uint<10>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 92, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'LSM::execute_op(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 113, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: loadstore.cpp, Line: 135, Column: 27 }
+Function:        _ZN3LSM10execute_opE7ap_uintILi4EES0_ILi5EES2_S2_S0_ILi32EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Memory::read(ap_uint<10>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 87, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'LSM::execute_op(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 113, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: loadstore.cpp, Line: 128, Column: 27 }
+Function:        _ZN3LSM10execute_opE7ap_uintILi4EES0_ILi5EES2_S2_S0_ILi32EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ALU::compute(ap_uint<32>, ap_uint<32>, ap_uint<4>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 54, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'LSM::execute_op(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 113, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: loadstore.cpp, Line: 118, Column: 29 }
+Function:        _ZN3LSM10execute_opE7ap_uintILi4EES0_ILi5EES2_S2_S0_ILi32EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'RegisterFile::read(ap_uint<5>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 17, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'LSM::execute_op(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 113, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: loadstore.cpp, Line: 171, Column: 21 }
+Function:        _ZN3LSM12get_registerE7ap_uintILi5EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'RegisterFile::read(ap_uint<5>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 17, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'LSM::get_register(ap_uint<5>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 170, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: loadstore.cpp, Line: 175, Column: 16 }
+Function:        _ZN3LSM7get_memE7ap_uintILi10EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'Memory::read(ap_uint<10>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 87, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'LSM::get_mem(ap_uint<10>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 174, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: loadstore.cpp, Line: 164, Column: 42 }
+Function:        _ZN3LSM15print_registersEv
+Args:            
+  - Callee:          'LSM::get_register(ap_uint<5>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 170, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'LSM::print_registers()'
+    DebugLoc:        { File: loadstore.cpp, Line: 159, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: loadstore.cpp, Line: 188, Column: 18 }
+Function:        _Z7execute7ap_uintILi4EES_ILi5EES1_S1_S_ILi32EE
+Args:            
+  - Callee:          'LSM::execute_op(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 113, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'execute(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: loadstore.cpp, Line: 206, Column: 18 }
+Function:        _Z7execute7ap_uintILi4EES_ILi5EES1_S1_S_ILi32EE
+Args:            
+  - Callee:          'LSM::print_registers()'
+    DebugLoc:        { File: loadstore.cpp, Line: 159, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'execute(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: loadstore.cpp, Line: 194, Column: 35 }
+Function:        _Z7execute7ap_uintILi4EES_ILi5EES1_S1_S_ILi32EE
+Args:            
+  - Callee:          'LSM::get_register(ap_uint<5>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 170, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'execute(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: loadstore.cpp, Line: 199, Column: 35 }
+Function:        _Z7execute7ap_uintILi4EES_ILi5EES1_S1_S_ILi32EE
+Args:            
+  - Callee:          'LSM::get_mem(ap_uint<10>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 174, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'execute(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: loadstore.cpp, Line: 164, Column: 42 }
+Function:        _ZN3LSM15print_registersEv
+Args:            
+  - Callee:          'LSM::get_register(ap_uint<5>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 170, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'LSM::print_registers()'
+    DebugLoc:        { File: loadstore.cpp, Line: 159, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: loadstore.cpp, Line: 188, Column: 18 }
+Function:        _Z7execute7ap_uintILi4EES_ILi5EES1_S1_S_ILi32EE
+Args:            
+  - Callee:          'LSM::execute_op(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 113, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'execute(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: loadstore.cpp, Line: 194, Column: 35 }
+Function:        _Z7execute7ap_uintILi4EES_ILi5EES1_S1_S_ILi32EE
+Args:            
+  - Callee:          'LSM::get_register(ap_uint<5>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 170, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'execute(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: loadstore.cpp, Line: 199, Column: 35 }
+Function:        _Z7execute7ap_uintILi4EES_ILi5EES1_S1_S_ILi32EE
+Args:            
+  - Callee:          'LSM::get_mem(ap_uint<10>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 174, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'execute(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: loadstore.cpp, Line: 206, Column: 18 }
+Function:        _Z7execute7ap_uintILi4EES_ILi5EES1_S1_S_ILi32EE
+Args:            
+  - Callee:          'LSM::print_registers()'
+    DebugLoc:        { File: loadstore.cpp, Line: 159, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'execute(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_execute_ir
+Args:            
+  - Callee:          'execute(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_execute_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: loadstore.cpp, Line: 159, Column: 0 }
+Function:        _ZN3LSM15print_registersEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'LSM::get_register(ap_uint<5>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 170, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'LSM::print_registers()'
+    DebugLoc:        { File: loadstore.cpp, Line: 159, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+Function:        _Z7execute7ap_uintILi4EES_ILi5EES1_S1_S_ILi32EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'LSM::execute_op(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 113, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'execute(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+Function:        _Z7execute7ap_uintILi4EES_ILi5EES1_S1_S_ILi32EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'LSM::get_register(ap_uint<5>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 170, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'execute(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+Function:        _Z7execute7ap_uintILi4EES_ILi5EES1_S1_S_ILi32EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'LSM::get_mem(ap_uint<10>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 174, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'execute(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+Function:        _Z7execute7ap_uintILi4EES_ILi5EES1_S1_S_ILi32EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'LSM::print_registers()'
+    DebugLoc:        { File: loadstore.cpp, Line: 159, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'execute(ap_uint<4>, ap_uint<5>, ap_uint<5>, ap_uint<5>, ap_uint<32>)'
+    DebugLoc:        { File: loadstore.cpp, Line: 185, Column: 0 }
+  - String:          ''''
+...

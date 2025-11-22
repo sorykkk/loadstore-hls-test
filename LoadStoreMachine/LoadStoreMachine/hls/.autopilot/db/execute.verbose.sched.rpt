@@ -1,0 +1,237 @@
+
+
+================================================================
+== Vitis HLS Report for 'execute'
+================================================================
+* Date:           Sat Nov 22 20:33:39 2025
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        LoadStoreMachine
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z007s-clg225-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.542 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        3|        4|  30.000 ns|  40.000 ns|    4|    5|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 6 
+3 --> 4 6 
+4 --> 5 
+5 --> 
+6 --> 5 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.77>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%rb_addr_read = read i5 @_ssdm_op_Read.ap_auto.i5, i5 %rb_addr" [loadstore.cpp:180]   --->   Operation 7 'read' 'rb_addr_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%ra_addr_read = read i5 @_ssdm_op_Read.ap_auto.i5, i5 %ra_addr" [loadstore.cpp:180]   --->   Operation 8 'read' 'ra_addr_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%zext_ln19 = zext i5 %ra_addr_read" [loadstore.cpp:19->loadstore.cpp:117->loadstore.cpp:188]   --->   Operation 9 'zext' 'zext_ln19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%lsm_instance_reg_file_addr = getelementptr i32 %lsm_instance_reg_file, i64 0, i64 %zext_ln19" [loadstore.cpp:19->loadstore.cpp:117->loadstore.cpp:188]   --->   Operation 10 'getelementptr' 'lsm_instance_reg_file_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [2/2] (2.77ns)   --->   "%a = load i5 %lsm_instance_reg_file_addr" [loadstore.cpp:94->loadstore.cpp:141->loadstore.cpp:188]   --->   Operation 11 'load' 'a' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln19_1 = zext i5 %rb_addr_read" [loadstore.cpp:19->loadstore.cpp:118->loadstore.cpp:188]   --->   Operation 12 'zext' 'zext_ln19_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%lsm_instance_reg_file_addr_1 = getelementptr i32 %lsm_instance_reg_file, i64 0, i64 %zext_ln19_1" [loadstore.cpp:19->loadstore.cpp:118->loadstore.cpp:188]   --->   Operation 13 'getelementptr' 'lsm_instance_reg_file_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [2/2] (2.77ns)   --->   "%reg_b_2 = load i5 %lsm_instance_reg_file_addr_1" [loadstore.cpp:19->loadstore.cpp:118->loadstore.cpp:188]   --->   Operation 14 'load' 'reg_b_2' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 2 <SV = 1> <Delay = 5.54>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 0"   --->   Operation 15 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%spectopmodule_ln179 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [loadstore.cpp:179]   --->   Operation 16 'spectopmodule' 'spectopmodule_ln179' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %opcode"   --->   Operation 17 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i4 %opcode, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %ra_addr"   --->   Operation 19 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %ra_addr, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %rb_addr"   --->   Operation 21 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %rb_addr, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %rc_addr"   --->   Operation 23 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %rc_addr, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %imd_data"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %imd_data, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%imd_data_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %imd_data" [loadstore.cpp:180]   --->   Operation 27 'read' 'imd_data_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%rc_addr_read = read i5 @_ssdm_op_Read.ap_auto.i5, i5 %rc_addr" [loadstore.cpp:180]   --->   Operation 28 'read' 'rc_addr_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%opcode_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %opcode" [loadstore.cpp:180]   --->   Operation 29 'read' 'opcode_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/2] ( I:2.77ns O:2.77ns )   --->   "%a = load i5 %lsm_instance_reg_file_addr" [loadstore.cpp:94->loadstore.cpp:141->loadstore.cpp:188]   --->   Operation 30 'load' 'a' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_2 : Operation 31 [1/2] ( I:2.77ns O:2.77ns )   --->   "%reg_b_2 = load i5 %lsm_instance_reg_file_addr_1" [loadstore.cpp:19->loadstore.cpp:118->loadstore.cpp:188]   --->   Operation 31 'load' 'reg_b_2' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_2 : Operation 32 [1/1] (0.99ns)   --->   "%switch_ln120 = switch i4 %opcode_read, void %sw.default, i4 9, void %sw.bb23.i, i4 6, void %sw.bb18.i, i4 5, void %sw.bb10.i, i4 1, void %sw.bb.i.i, i4 2, void %sw.bb3.i.i, i4 3, void %sw.bb7.i.i, i4 4, void %sw.bb11.i.i, i4 8, void %sw.bb15.i.i" [loadstore.cpp:120->loadstore.cpp:188]   --->   Operation 32 'switch' 'switch_ln120' <Predicate = true> <Delay = 0.99>
+ST_2 : Operation 33 [1/1] (1.89ns)   --->   "%result_4 = icmp_eq  i32 %a, i32 %reg_b_2" [loadstore.cpp:51->loadstore.cpp:71->loadstore.cpp:128->loadstore.cpp:188]   --->   Operation 33 'icmp' 'result_4' <Predicate = (opcode_read == 8)> <Delay = 1.89> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln51 = zext i1 %result_4" [loadstore.cpp:51->loadstore.cpp:71->loadstore.cpp:128->loadstore.cpp:188]   --->   Operation 34 'zext' 'zext_ln51' <Predicate = (opcode_read == 8)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (1.37ns)   --->   "%br_ln72 = br void %_ZN3ALU7computeE7ap_uintILi32EES1_S0_ILi4EE.exit.i" [loadstore.cpp:72->loadstore.cpp:128->loadstore.cpp:188]   --->   Operation 35 'br' 'br_ln72' <Predicate = (opcode_read == 8)> <Delay = 1.37>
+ST_2 : Operation 36 [1/1] (0.80ns)   --->   "%result_3 = or i32 %reg_b_2, i32 %a" [loadstore.cpp:46->loadstore.cpp:68->loadstore.cpp:128->loadstore.cpp:188]   --->   Operation 36 'or' 'result_3' <Predicate = (opcode_read == 4)> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (1.37ns)   --->   "%br_ln69 = br void %_ZN3ALU7computeE7ap_uintILi32EES1_S0_ILi4EE.exit.i" [loadstore.cpp:69->loadstore.cpp:128->loadstore.cpp:188]   --->   Operation 37 'br' 'br_ln69' <Predicate = (opcode_read == 4)> <Delay = 1.37>
+ST_2 : Operation 38 [1/1] (0.80ns)   --->   "%result_2 = and i32 %reg_b_2, i32 %a" [loadstore.cpp:41->loadstore.cpp:65->loadstore.cpp:128->loadstore.cpp:188]   --->   Operation 38 'and' 'result_2' <Predicate = (opcode_read == 3)> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 39 [1/1] (1.37ns)   --->   "%br_ln66 = br void %_ZN3ALU7computeE7ap_uintILi32EES1_S0_ILi4EE.exit.i" [loadstore.cpp:66->loadstore.cpp:128->loadstore.cpp:188]   --->   Operation 39 'br' 'br_ln66' <Predicate = (opcode_read == 3)> <Delay = 1.37>
+ST_2 : Operation 40 [1/1] (1.89ns)   --->   "%result_1 = sub i32 %a, i32 %reg_b_2" [loadstore.cpp:36->loadstore.cpp:62->loadstore.cpp:128->loadstore.cpp:188]   --->   Operation 40 'sub' 'result_1' <Predicate = (opcode_read == 2)> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (1.37ns)   --->   "%br_ln63 = br void %_ZN3ALU7computeE7ap_uintILi32EES1_S0_ILi4EE.exit.i" [loadstore.cpp:63->loadstore.cpp:128->loadstore.cpp:188]   --->   Operation 41 'br' 'br_ln63' <Predicate = (opcode_read == 2)> <Delay = 1.37>
+ST_2 : Operation 42 [1/1] (1.89ns)   --->   "%result = add i32 %reg_b_2, i32 %a" [loadstore.cpp:31->loadstore.cpp:59->loadstore.cpp:128->loadstore.cpp:188]   --->   Operation 42 'add' 'result' <Predicate = (opcode_read == 1)> <Delay = 1.89> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.89> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (1.37ns)   --->   "%br_ln60 = br void %_ZN3ALU7computeE7ap_uintILi32EES1_S0_ILi4EE.exit.i" [loadstore.cpp:60->loadstore.cpp:128->loadstore.cpp:188]   --->   Operation 43 'br' 'br_ln60' <Predicate = (opcode_read == 1)> <Delay = 1.37>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%address_1 = trunc i32 %reg_b_2" [loadstore.cpp:135->loadstore.cpp:188]   --->   Operation 44 'trunc' 'address_1' <Predicate = (opcode_read == 5)> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%zext_ln89 = zext i10 %address_1" [loadstore.cpp:89->loadstore.cpp:135->loadstore.cpp:188]   --->   Operation 45 'zext' 'zext_ln89' <Predicate = (opcode_read == 5)> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%lsm_instance_mem_addr_1 = getelementptr i32 %lsm_instance_mem, i64 0, i64 %zext_ln89" [loadstore.cpp:89->loadstore.cpp:135->loadstore.cpp:188]   --->   Operation 46 'getelementptr' 'lsm_instance_mem_addr_1' <Predicate = (opcode_read == 5)> <Delay = 0.00>
+ST_2 : Operation 47 [2/2] (2.77ns)   --->   "%mem_out = load i10 %lsm_instance_mem_addr_1" [loadstore.cpp:135->loadstore.cpp:188]   --->   Operation 47 'load' 'mem_out' <Predicate = (opcode_read == 5)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 48 [1/1] (1.02ns)   --->   "%icmp_ln12_1 = icmp_eq  i5 %ra_addr_read, i5 0" [loadstore.cpp:12->loadstore.cpp:136->loadstore.cpp:188]   --->   Operation 48 'icmp' 'icmp_ln12_1' <Predicate = (opcode_read == 5)> <Delay = 1.02> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%address = trunc i32 %reg_b_2" [loadstore.cpp:141->loadstore.cpp:188]   --->   Operation 49 'trunc' 'address' <Predicate = (opcode_read == 6)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%zext_ln94 = zext i10 %address" [loadstore.cpp:94->loadstore.cpp:141->loadstore.cpp:188]   --->   Operation 50 'zext' 'zext_ln94' <Predicate = (opcode_read == 6)> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%lsm_instance_mem_addr = getelementptr i32 %lsm_instance_mem, i64 0, i64 %zext_ln94" [loadstore.cpp:94->loadstore.cpp:141->loadstore.cpp:188]   --->   Operation 51 'getelementptr' 'lsm_instance_mem_addr' <Predicate = (opcode_read == 6)> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] ( I:2.77ns O:2.77ns )   --->   "%store_ln94 = store i32 %a, i10 %lsm_instance_mem_addr" [loadstore.cpp:94->loadstore.cpp:141->loadstore.cpp:188]   --->   Operation 52 'store' 'store_ln94' <Predicate = (opcode_read == 6)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln142 = br void %_ZN3LSM10execute_opE7ap_uintILi4EES0_ILi5EES2_S2_S0_ILi32EE.exit" [loadstore.cpp:142->loadstore.cpp:188]   --->   Operation 53 'br' 'br_ln142' <Predicate = (opcode_read == 6)> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (1.02ns)   --->   "%icmp_ln12 = icmp_eq  i5 %ra_addr_read, i5 0" [loadstore.cpp:12->loadstore.cpp:145->loadstore.cpp:188]   --->   Operation 54 'icmp' 'icmp_ln12' <Predicate = (opcode_read == 9)> <Delay = 1.02> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%br_ln12 = br i1 %icmp_ln12, void %if.then.i.i, void %_ZN12RegisterFile5writeE7ap_uintILi5EES0_ILi32EE.exit.i" [loadstore.cpp:12->loadstore.cpp:145->loadstore.cpp:188]   --->   Operation 55 'br' 'br_ln12' <Predicate = (opcode_read == 9)> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] ( I:2.77ns O:2.77ns )   --->   "%store_ln13 = store i32 %imd_data_read, i5 %lsm_instance_reg_file_addr" [loadstore.cpp:13->loadstore.cpp:145->loadstore.cpp:188]   --->   Operation 56 'store' 'store_ln13' <Predicate = (opcode_read == 9 & !icmp_ln12)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%br_ln14 = br void %_ZN12RegisterFile5writeE7ap_uintILi5EES0_ILi32EE.exit.i" [loadstore.cpp:14->loadstore.cpp:145->loadstore.cpp:188]   --->   Operation 57 'br' 'br_ln14' <Predicate = (opcode_read == 9 & !icmp_ln12)> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%br_ln146 = br void %_ZN3LSM10execute_opE7ap_uintILi4EES0_ILi5EES2_S2_S0_ILi32EE.exit" [loadstore.cpp:146->loadstore.cpp:188]   --->   Operation 58 'br' 'br_ln146' <Predicate = (opcode_read == 9)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 5.54>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%result_6 = phi i32 %zext_ln51, void %sw.bb15.i.i, i32 %result_3, void %sw.bb11.i.i, i32 %result_2, void %sw.bb7.i.i, i32 %result_1, void %sw.bb3.i.i, i32 %result, void %sw.bb.i.i"   --->   Operation 59 'phi' 'result_6' <Predicate = (opcode_read == 8) | (opcode_read == 4) | (opcode_read == 3) | (opcode_read == 2) | (opcode_read == 1)> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (1.02ns)   --->   "%icmp_ln12_2 = icmp_eq  i5 %rc_addr_read, i5 0" [loadstore.cpp:12->loadstore.cpp:129->loadstore.cpp:188]   --->   Operation 60 'icmp' 'icmp_ln12_2' <Predicate = (opcode_read == 8) | (opcode_read == 4) | (opcode_read == 3) | (opcode_read == 2) | (opcode_read == 1)> <Delay = 1.02> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%br_ln12 = br i1 %icmp_ln12_2, void %if.then.i81.i, void %_ZN12RegisterFile5writeE7ap_uintILi5EES0_ILi32EE.exit82.i" [loadstore.cpp:12->loadstore.cpp:129->loadstore.cpp:188]   --->   Operation 61 'br' 'br_ln12' <Predicate = (opcode_read == 8) | (opcode_read == 4) | (opcode_read == 3) | (opcode_read == 2) | (opcode_read == 1)> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%zext_ln13 = zext i5 %rc_addr_read" [loadstore.cpp:13->loadstore.cpp:129->loadstore.cpp:188]   --->   Operation 62 'zext' 'zext_ln13' <Predicate = (opcode_read == 8 & !icmp_ln12_2) | (opcode_read == 4 & !icmp_ln12_2) | (opcode_read == 3 & !icmp_ln12_2) | (opcode_read == 2 & !icmp_ln12_2) | (opcode_read == 1 & !icmp_ln12_2)> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%lsm_instance_reg_file_addr_2 = getelementptr i32 %lsm_instance_reg_file, i64 0, i64 %zext_ln13" [loadstore.cpp:13->loadstore.cpp:129->loadstore.cpp:188]   --->   Operation 63 'getelementptr' 'lsm_instance_reg_file_addr_2' <Predicate = (opcode_read == 8 & !icmp_ln12_2) | (opcode_read == 4 & !icmp_ln12_2) | (opcode_read == 3 & !icmp_ln12_2) | (opcode_read == 2 & !icmp_ln12_2) | (opcode_read == 1 & !icmp_ln12_2)> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] ( I:2.77ns O:2.77ns )   --->   "%store_ln13 = store i32 %result_6, i5 %lsm_instance_reg_file_addr_2" [loadstore.cpp:13->loadstore.cpp:129->loadstore.cpp:188]   --->   Operation 64 'store' 'store_ln13' <Predicate = (opcode_read == 8 & !icmp_ln12_2) | (opcode_read == 4 & !icmp_ln12_2) | (opcode_read == 3 & !icmp_ln12_2) | (opcode_read == 2 & !icmp_ln12_2) | (opcode_read == 1 & !icmp_ln12_2)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%br_ln14 = br void %_ZN12RegisterFile5writeE7ap_uintILi5EES0_ILi32EE.exit82.i" [loadstore.cpp:14->loadstore.cpp:129->loadstore.cpp:188]   --->   Operation 65 'br' 'br_ln14' <Predicate = (opcode_read == 8 & !icmp_ln12_2) | (opcode_read == 4 & !icmp_ln12_2) | (opcode_read == 3 & !icmp_ln12_2) | (opcode_read == 2 & !icmp_ln12_2) | (opcode_read == 1 & !icmp_ln12_2)> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%br_ln131 = br void %_ZN3LSM10execute_opE7ap_uintILi4EES0_ILi5EES2_S2_S0_ILi32EE.exit" [loadstore.cpp:131->loadstore.cpp:188]   --->   Operation 66 'br' 'br_ln131' <Predicate = (opcode_read == 8) | (opcode_read == 4) | (opcode_read == 3) | (opcode_read == 2) | (opcode_read == 1)> <Delay = 0.00>
+ST_3 : Operation 67 [1/2] ( I:2.77ns O:2.77ns )   --->   "%mem_out = load i10 %lsm_instance_mem_addr_1" [loadstore.cpp:135->loadstore.cpp:188]   --->   Operation 67 'load' 'mem_out' <Predicate = (opcode_read == 5)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln12 = br i1 %icmp_ln12_1, void %if.then.i31.i, void %_ZN12RegisterFile5writeE7ap_uintILi5EES0_ILi32EE.exit32.i" [loadstore.cpp:12->loadstore.cpp:136->loadstore.cpp:188]   --->   Operation 68 'br' 'br_ln12' <Predicate = (opcode_read == 5)> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] ( I:2.77ns O:2.77ns )   --->   "%store_ln13 = store i32 %mem_out, i5 %lsm_instance_reg_file_addr" [loadstore.cpp:13->loadstore.cpp:136->loadstore.cpp:188]   --->   Operation 69 'store' 'store_ln13' <Predicate = (opcode_read == 5 & !icmp_ln12_1)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%br_ln14 = br void %_ZN12RegisterFile5writeE7ap_uintILi5EES0_ILi32EE.exit32.i" [loadstore.cpp:14->loadstore.cpp:136->loadstore.cpp:188]   --->   Operation 70 'br' 'br_ln14' <Predicate = (opcode_read == 5 & !icmp_ln12_1)> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%br_ln138 = br void %_ZN3LSM10execute_opE7ap_uintILi4EES0_ILi5EES2_S2_S0_ILi32EE.exit" [loadstore.cpp:138->loadstore.cpp:188]   --->   Operation 71 'br' 'br_ln138' <Predicate = (opcode_read == 5)> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (0.99ns)   --->   "%switch_ln191 = switch i4 %opcode_read, void %sw.default, i4 9, void %sw.bb, i4 5, void %sw.bb, i4 6, void %sw.bb11" [loadstore.cpp:191]   --->   Operation 72 'switch' 'switch_ln191' <Predicate = (opcode_read == 8) | (opcode_read == 4) | (opcode_read == 3) | (opcode_read == 2) | (opcode_read == 1) | (opcode_read == 5) | (opcode_read == 6) | (opcode_read == 9)> <Delay = 0.99>
+ST_3 : Operation 73 [2/2] (2.77ns)   --->   "%reg_b = load i5 %lsm_instance_reg_file_addr_1" [loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:198]   --->   Operation 73 'load' 'reg_b' <Predicate = (opcode_read == 6)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 4 <SV = 3> <Delay = 5.54>
+ST_4 : Operation 74 [1/2] ( I:2.77ns O:2.77ns )   --->   "%reg_b = load i5 %lsm_instance_reg_file_addr_1" [loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:198]   --->   Operation 74 'load' 'reg_b' <Predicate = (opcode_read == 6)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "%mem_addr = trunc i32 %reg_b" [loadstore.cpp:199]   --->   Operation 75 'trunc' 'mem_addr' <Predicate = (opcode_read == 6)> <Delay = 0.00>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "%zext_ln89_1 = zext i10 %mem_addr" [loadstore.cpp:89->loadstore.cpp:175->loadstore.cpp:199]   --->   Operation 76 'zext' 'zext_ln89_1' <Predicate = (opcode_read == 6)> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (0.00ns)   --->   "%lsm_instance_mem_addr_2 = getelementptr i32 %lsm_instance_mem, i64 0, i64 %zext_ln89_1" [loadstore.cpp:89->loadstore.cpp:175->loadstore.cpp:199]   --->   Operation 77 'getelementptr' 'lsm_instance_mem_addr_2' <Predicate = (opcode_read == 6)> <Delay = 0.00>
+ST_4 : Operation 78 [2/2] (2.77ns)   --->   "%lsm_instance_mem_load = load i10 %lsm_instance_mem_addr_2" [loadstore.cpp:89->loadstore.cpp:175->loadstore.cpp:199]   --->   Operation 78 'load' 'lsm_instance_mem_load' <Predicate = (opcode_read == 6)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 79 [2/2] (2.77ns)   --->   "%lsm_instance_reg_file_load_2 = load i5 %lsm_instance_reg_file_addr" [loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:194]   --->   Operation 79 'load' 'lsm_instance_reg_file_load_2' <Predicate = (opcode_read == 5) | (opcode_read == 9)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+State 5 <SV = 4> <Delay = 4.09>
+ST_5 : Operation 80 [1/2] ( I:2.77ns O:2.77ns )   --->   "%lsm_instance_mem_load = load i10 %lsm_instance_mem_addr_2" [loadstore.cpp:89->loadstore.cpp:175->loadstore.cpp:199]   --->   Operation 80 'load' 'lsm_instance_mem_load' <Predicate = (opcode_read == 6)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_5 : Operation 81 [1/1] (1.32ns)   --->   "%br_ln201 = br void %sw.epilog" [loadstore.cpp:201]   --->   Operation 81 'br' 'br_ln201' <Predicate = (opcode_read == 6)> <Delay = 1.32>
+ST_5 : Operation 82 [1/2] ( I:2.77ns O:2.77ns )   --->   "%lsm_instance_reg_file_load_2 = load i5 %lsm_instance_reg_file_addr" [loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:194]   --->   Operation 82 'load' 'lsm_instance_reg_file_load_2' <Predicate = (opcode_read == 5) | (opcode_read == 9)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_5 : Operation 83 [1/1] (1.32ns)   --->   "%br_ln195 = br void %sw.epilog" [loadstore.cpp:195]   --->   Operation 83 'br' 'br_ln195' <Predicate = (opcode_read == 5) | (opcode_read == 9)> <Delay = 1.32>
+ST_5 : Operation 84 [1/2] ( I:2.77ns O:2.77ns )   --->   "%lsm_instance_reg_file_load = load i5 %lsm_instance_reg_file_addr_3" [loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:203]   --->   Operation 84 'load' 'lsm_instance_reg_file_load' <Predicate = (opcode_read != 9 & opcode_read != 6 & opcode_read != 5)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+ST_5 : Operation 85 [1/1] (1.32ns)   --->   "%br_ln204 = br void %sw.epilog" [loadstore.cpp:204]   --->   Operation 85 'br' 'br_ln204' <Predicate = (opcode_read != 9 & opcode_read != 6 & opcode_read != 5)> <Delay = 1.32>
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%retval_0_0_0_0 = phi i32 %lsm_instance_reg_file_load, void %sw.default, i32 %lsm_instance_mem_load, void %sw.bb11, i32 %lsm_instance_reg_file_load_2, void %sw.bb" [loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:203]   --->   Operation 86 'phi' 'retval_0_0_0_0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 87 [1/1] (0.00ns)   --->   "%ret_ln207 = ret i32 %retval_0_0_0_0" [loadstore.cpp:207]   --->   Operation 87 'ret' 'ret_ln207' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 3> <Delay = 2.77>
+ST_6 : Operation 88 [1/1] (0.00ns)   --->   "%zext_ln19_2 = zext i5 %rc_addr_read" [loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:203]   --->   Operation 88 'zext' 'zext_ln19_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 89 [1/1] (0.00ns)   --->   "%lsm_instance_reg_file_addr_3 = getelementptr i32 %lsm_instance_reg_file, i64 0, i64 %zext_ln19_2" [loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:203]   --->   Operation 89 'getelementptr' 'lsm_instance_reg_file_addr_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 90 [2/2] (2.77ns)   --->   "%lsm_instance_reg_file_load = load i5 %lsm_instance_reg_file_addr_3" [loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:203]   --->   Operation 90 'load' 'lsm_instance_reg_file_load' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 32> <RAM>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 2.771ns
+The critical path consists of the following:
+	wire read operation ('ra_addr', loadstore.cpp:180) on port 'ra_addr' (loadstore.cpp:180) [23]  (0.000 ns)
+	'getelementptr' operation 5 bit ('lsm_instance_reg_file_addr', loadstore.cpp:19->loadstore.cpp:117->loadstore.cpp:188) [26]  (0.000 ns)
+	'load' operation 32 bit ('a', loadstore.cpp:94->loadstore.cpp:141->loadstore.cpp:188) on array 'lsm_instance_reg_file' [27]  (2.771 ns)
+
+ <State 2>: 5.542ns
+The critical path consists of the following:
+	'load' operation 32 bit ('a', loadstore.cpp:94->loadstore.cpp:141->loadstore.cpp:188) on array 'lsm_instance_reg_file' [27]  (2.771 ns)
+	'store' operation 0 bit ('store_ln94', loadstore.cpp:94->loadstore.cpp:141->loadstore.cpp:188) of variable 'a', loadstore.cpp:94->loadstore.cpp:141->loadstore.cpp:188 on array 'lsm_instance_mem' [75]  (2.771 ns)
+
+ <State 3>: 5.542ns
+The critical path consists of the following:
+	'load' operation 32 bit ('mem_out', loadstore.cpp:135->loadstore.cpp:188) on array 'lsm_instance_mem' [63]  (2.771 ns)
+	'store' operation 0 bit ('store_ln13', loadstore.cpp:13->loadstore.cpp:136->loadstore.cpp:188) of variable 'mem_out', loadstore.cpp:135->loadstore.cpp:188 on array 'lsm_instance_reg_file' [67]  (2.771 ns)
+
+ <State 4>: 5.542ns
+The critical path consists of the following:
+	'load' operation 32 bit ('reg_b', loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:198) on array 'lsm_instance_reg_file' [88]  (2.771 ns)
+	'getelementptr' operation 10 bit ('lsm_instance_mem_addr_2', loadstore.cpp:89->loadstore.cpp:175->loadstore.cpp:199) [91]  (0.000 ns)
+	'load' operation 32 bit ('lsm_instance_mem_load', loadstore.cpp:89->loadstore.cpp:175->loadstore.cpp:199) on array 'lsm_instance_mem' [92]  (2.771 ns)
+
+ <State 5>: 4.096ns
+The critical path consists of the following:
+	'load' operation 32 bit ('lsm_instance_mem_load', loadstore.cpp:89->loadstore.cpp:175->loadstore.cpp:199) on array 'lsm_instance_mem' [92]  (2.771 ns)
+	multiplexor before 'phi' operation 32 bit ('retval_0_0_0_0', loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:203) with incoming values : ('lsm_instance_mem_load', loadstore.cpp:89->loadstore.cpp:175->loadstore.cpp:199) ('lsm_instance_reg_file_load_2', loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:194) ('lsm_instance_reg_file_load', loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:203) [103]  (1.325 ns)
+	'phi' operation 32 bit ('retval_0_0_0_0', loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:203) with incoming values : ('lsm_instance_mem_load', loadstore.cpp:89->loadstore.cpp:175->loadstore.cpp:199) ('lsm_instance_reg_file_load_2', loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:194) ('lsm_instance_reg_file_load', loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:203) [103]  (0.000 ns)
+
+ <State 6>: 2.771ns
+The critical path consists of the following:
+	'getelementptr' operation 5 bit ('lsm_instance_reg_file_addr_3', loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:203) [99]  (0.000 ns)
+	'load' operation 32 bit ('lsm_instance_reg_file_load', loadstore.cpp:19->loadstore.cpp:171->loadstore.cpp:203) on array 'lsm_instance_reg_file' [100]  (2.771 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

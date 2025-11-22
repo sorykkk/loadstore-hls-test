@@ -1,0 +1,334 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "2 15 7 15 15 6",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "loadstore.cpp",
+    "fileloc": 179,
+    "instructions": 71,
+    "loads": {
+      "G": 1,
+      "L": 4
+    },
+    "memory_accesses": 0,
+    "name": "execute",
+    "stores": {
+      "G": 1,
+      "L": 9
+    },
+    "total_instructions": 1432
+  },
+  "1": {
+    "basicblocks": 3,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "loadstore.cpp",
+    "fileloc": 10,
+    "instructions": 11,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "write",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 43
+  },
+  "10": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "loadstore.cpp",
+    "fileloc": 4,
+    "instructions": 22,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 3,
+    "name": "RegisterFile",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 37
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "loadstore.cpp",
+    "fileloc": 17,
+    "instructions": 7,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "read",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "loadstore.cpp",
+    "fileloc": 39,
+    "instructions": 4,
+    "memory_accesses": 0,
+    "name": "and_op",
+    "total_instructions": 49
+  },
+  "13": {
+    "basicblocks": 8,
+    "calls": "14 5 12 16 20",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "loadstore.cpp",
+    "fileloc": 54,
+    "instructions": 89,
+    "loads": {
+      "L": 16
+    },
+    "memory_accesses": 0,
+    "name": "compute",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 492
+  },
+  "14": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "loadstore.cpp",
+    "fileloc": 49,
+    "instructions": 5,
+    "memory_accesses": 0,
+    "name": "cmp",
+    "total_instructions": 30
+  },
+  "15": {
+    "basicblocks": 1,
+    "calls": "11",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "loadstore.cpp",
+    "fileloc": 170,
+    "instructions": 6,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "get_register",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 18
+  },
+  "16": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "loadstore.cpp",
+    "fileloc": 34,
+    "instructions": 10,
+    "memory_accesses": 0,
+    "name": "sub",
+    "total_instructions": 120
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "loadstore.cpp",
+    "fileloc": 27,
+    "instructions": 1,
+    "memory_accesses": 0,
+    "name": "ALU",
+    "total_instructions": 1
+  },
+  "18": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "loadstore.cpp",
+    "fileloc": 81,
+    "instructions": 22,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 3,
+    "name": "Memory",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 37
+  },
+  "19": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "loadstore.cpp",
+    "fileloc": 87,
+    "instructions": 7,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "read",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  },
+  "2": {
+    "basicblocks": 8,
+    "calls": "11 11 1 9 19 1 13 1",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "loadstore.cpp",
+    "fileloc": 107,
+    "instructions": 122,
+    "loads": {
+      "L": 14
+    },
+    "memory_accesses": 0,
+    "name": "execute_op",
+    "stores": {
+      "L": 14
+    },
+    "total_instructions": 1093
+  },
+  "20": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "loadstore.cpp",
+    "fileloc": 29,
+    "instructions": 10,
+    "memory_accesses": 0,
+    "name": "add",
+    "total_instructions": 120
+  },
+  "3": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "loadstore.cpp",
+    "fileloc": 22,
+    "instructions": 21,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 3,
+    "name": "reset",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 36
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "3 8",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "loadstore.cpp",
+    "fileloc": 102,
+    "instructions": 11,
+    "memory_accesses": 0,
+    "name": "LSM",
+    "total_instructions": 83
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "loadstore.cpp",
+    "fileloc": 44,
+    "instructions": 4,
+    "memory_accesses": 0,
+    "name": "or_op",
+    "total_instructions": 49
+  },
+  "6": {
+    "basicblocks": 9,
+    "calls": "15",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "loadstore.cpp",
+    "fileloc": 159,
+    "instructions": 24,
+    "memory_accesses": 5,
+    "name": "print_registers",
+    "total_instructions": 64
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "19",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "loadstore.cpp",
+    "fileloc": 174,
+    "instructions": 6,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "get_mem",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 18
+  },
+  "8": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "loadstore.cpp",
+    "fileloc": 97,
+    "instructions": 21,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 3,
+    "name": "reset",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 36
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "loadstore.cpp",
+    "fileloc": 92,
+    "instructions": 7,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "write",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  }
+}

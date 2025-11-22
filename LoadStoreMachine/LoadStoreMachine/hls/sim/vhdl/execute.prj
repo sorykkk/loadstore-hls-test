@@ -1,0 +1,13 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+sv work "glbl.v"
+vhdl xil_defaultlib "execute.vhd"
+vhdl xil_defaultlib "execute_lsm_instance_mem_RAM_AUTO_1R1W.vhd"
+vhdl xil_defaultlib "execute_lsm_instance_reg_file_RAM_AUTO_1R1W.vhd"
+sv xil_defaultlib "execute.autotb.v"
+sv xil_defaultlib "./file_agent/file_agent_pkg.sv"     
+sv xil_defaultlib "./svr/svr_pkg.sv"    
+sv xil_defaultlib "./svr/svr_if.sv"   
+sv xil_defaultlib "./execute_subsystem/execute_subsystem_pkg.sv"           
+sv xil_defaultlib "./svtb/misc_interface.sv"    
+sv xil_defaultlib "./svtb/sv_module_top.sv"   
+
